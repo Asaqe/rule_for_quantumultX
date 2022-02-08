@@ -1,0 +1,17 @@
+{
+  "data": {
+    "userId": "o20fnr",
+    "name": null,
+    "gender": 0,
+    "avatar": null,
+    "birthday": null,
+    "mobile": null,
+    "vipState": {
+      "state": 1,
+      "forever": true,
+      "startTime": null,
+      "expireTime": null
+    }
+  },
+  "code": 1
+}
