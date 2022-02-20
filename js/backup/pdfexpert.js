@@ -1,7 +1,7 @@
 /*
 [rewrite_local]
 # PDF Expert 7 解锁内购年订阅
-https:\/\/license\.pdfexpert\.com\/api\/1.0\/pdfexpert6\/subscription\/(check|refresh) url script-response-body PDFExpert.js
+https:\/\/license\.pdfexpert\.com\/api\/1.0\/pdfexpert6\/subscription\/(check|refresh) url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/pdfexpert.js
 [mitm]
 hostname = license.pdfexpert.com,
 */
