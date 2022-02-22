@@ -13,7 +13,7 @@ http-response ^https:\/\/education\.github\.com\/api\/user$ requires-body=1,max-
 MitM = education.github.com
 
 作者 @ImSingee，请勿外传
-*/
+
 
 $done({body: '{"student": true}'})
 
