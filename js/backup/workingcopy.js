@@ -1,15 +1,57 @@
-/*
-利用 GitHub Education 解锁 Working Copy
+var obj = {
+  "_id": {
+    "$oid": "621814dba0d90374a64bf0f1"
+  },
+  "watchList": [{
+    "app": [],
+    "title": null,
+    "info": null,
+    "up": 0,
+    "down": 0,
+    "comment": 0,
+    "watch": 0,
+    "user": null
+  }],
+  "username": "asaqe",
+  "premium": true,
+  "mod": true,
+  "private": true,
+  "region": "CN",
+  "wish": [],
+  "own": [],
+  "up": [],
+  "down": [],
+  "follows": [],
+  "follower": [],
+  "image": {
+    "$oid": "000000000000000000000003"
+  },
+  "wishCount": 0,
+  "ownCount": 0,
+  "upCount": 0,
+  "downCount": 0,
+  "followsCount": 0,
+  "followerCount": 0,
+  "listCount": 0,
+  "list": [{
+    "app": [],
+    "title": null,
+    "info": null,
+    "up": 0,
+    "down": 0,
+    "comment": 0,
+    "watch": 0,
+    "user": null
+  }],
+  "watchListCount": 0,
+  "commentApp": [],
+  "commentAppCount": 0,
+  "totalCommentAppCount": 0,
+  "upArtistCount": 0,
+  "downArtistCount": 0,
+  "watchArtistCount": 0,
+  "youfollow": 0,
+  "yourfollower": 0
+}
 
-
-启用此脚本后再 Safari 打开 https://workingcopy.app/education/ 点击「tap here to access all pro features.」中的 here 跳转到 Working Copy，登录自己的 GitHub 账号即可解锁
-
-http-response ^https:\/\/education\.github\.com\/api\/user$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/workingcopy.js
-
-MitM = education.github.com
-
-
-作者 @ImSingee，请勿外传
-*/
-
-$done({body: '{"student": true}'})
+$done({body: JSON.stringify(obj)});
