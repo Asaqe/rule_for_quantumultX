@@ -1,4 +1,4 @@
-{
+var obj = {
   "status": {
     "code": 0,
     "message": "success",
@@ -68,3 +68,4 @@
     "collectGoodPriceCount": "0"
   }
 }
+$done({body: JSON.stringify(obj)})
