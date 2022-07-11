@@ -42,7 +42,7 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
                                           }
 	}
 	// Airmail Premium
-	if (url.indexOf("5647911E-B243-48C9-A25C-29116412A20D")!=-1) {
+	/*if (url.indexOf("5647911E-B243-48C9-A25C-29116412A20D")!=-1) {
 		obj["subscriber"]["entitlements"]={
 			"Airmail Premium": {
 				"expires_date": "2099-12-01T00:00:00Z",
@@ -62,7 +62,7 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
 				"store": "app_store"
 			}
 		};
-	}
+	}*/
 	else{    
 		obj ={"request_date_ms" : 1644807425219,
                       "request_date" : "2022-02-14T02:57:05Z",
