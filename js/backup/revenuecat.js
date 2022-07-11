@@ -63,7 +63,7 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
 			}
 		};
 	}
-	else{obj ={
+	if (url.indexOf("E5D5EAD3-417A-4672-9023-1FBBDD5D47E8")!=-1){obj ={
   "request_date_ms" : 1644807425219,
   "request_date" : "2022-02-14T02:57:05Z",
   "subscriber" : {
