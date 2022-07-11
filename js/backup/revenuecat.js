@@ -8,7 +8,7 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
 	$done({});
 } else {
 	// Noto笔记Lifetime
-	if (url.indexOf("EE5F4363-50A2-4A57-8172-DA69F76DE2FB")!=-1) {
+	if (url.indexOf("8DA3F946-C754-411E-8928-C9D1DAEC1CD1")!=-1) {
 		var obj = {"request_date": "2020-06-05T11:54:41Z",
   "request_date_ms": 1591358081473,
   "subscriber": {
