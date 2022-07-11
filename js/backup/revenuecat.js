@@ -1,14 +1,14 @@
 /*
 ^https:\/\/api.revenuecat.com\/v1\/subscribers\/ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/revenuecat.js
 */
-let obj=JSON.parse($response.body);
+let obj = JSON.parse($response.body);
 let url=$request.url;
 
 if(url.endsWith("offerings")||url.endsWith("products")) {
 	$done({});
 } else {
 		if (url.indexOf("E5D5EAD3-417A-4672-9023-1FBBDD5D47E8")!=-1) {    
-		obj ={"request_date_ms" : 1644807425219,
+	      var obj ={"request_date_ms" : 1644807425219,
                       "request_date" : "2022-02-14T02:57:05Z",
                       "subscriber" : {
                       "non_subscriptions" : {
