@@ -5,8 +5,8 @@ let obj = JSON.parse($response.body);
 let url=$request.url;
 
 if(url.endsWith("offerings")||url.endsWith("products")) {
-	$done({});
-} else {
+	//$done({});
+//} else {
 		if (url.indexOf("E5D5EAD3-417A-4672-9023-1FBBDD5D47E8")!=-1) {    
 	      var obj ={"request_date_ms" : 1644807425219,
                       "request_date" : "2022-02-14T02:57:05Z",
@@ -105,5 +105,5 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
 	}*/
 
 }
-
+}
 $done({body:JSON.stringify(obj)});
