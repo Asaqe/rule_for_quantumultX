@@ -1,3 +1,6 @@
+/*
+^https:\/\/api.revenuecat.com\/v1\/subscribers\/ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/revenuecat.js
+*/
 let obj=JSON.parse($response.body);
 let url=$request.url;
 
