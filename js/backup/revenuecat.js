@@ -63,7 +63,7 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
 			}
 		};
 	}
-	if ((url.indexOf("3DB84DEF-05B6-4B5D-9300-B5C18639CF9B")!=-1)||(url.indexOf("E5D5EAD3-417A-4672-9023-1FBBDD5D47E8")!=-1)){obj ={
+	if ((url.indexOf("8AC99158-B45E-4EA7-ACFE-FDB6E80D56F6")!=-1)||(url.indexOf("3DB84DEF-05B6-4B5D-9300-B5C18639CF9B")!=-1)||(url.indexOf("E5D5EAD3-417A-4672-9023-1FBBDD5D47E8")!=-1)){obj ={
   "request_date_ms" : 1644807425219,
   "request_date" : "2022-02-14T02:57:05Z",
   "subscriber" : {
