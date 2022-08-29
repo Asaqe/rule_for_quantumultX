@@ -3,7 +3,8 @@
 
 ^https:\/\/cubox.pro\/c\/api\/userInfo url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/cubox.js
 
-[mitm]=cubox.pro
+[mitm]
+hostname=cubox.pro
 ***********/
 
 var body = $response.body;
