@@ -8,11 +8,11 @@ hostname = *.nebo.app,
 
 let obj = JSON.parse($response.body);
 obj = {
-  "originalApplicationVersion": "3.4.0.11563",
-  "dateReceiptCreation": 1661751984000,
-  "inapps": [],
-  "bundleIdentifier": "com.myscript.nebo",
-  "bundleVersion": "3.4.0.11563"
+  "bundleIdentifier":"com.myscript.nebo",
+  "bundleVersion":"3.4.0.11563",
+  "originalApplicationVersion":"2.8.2.8168",
+  "dateReceiptCreation":1661870767000,
+  "inapps":[]
 };
 
 $done({body: JSON.stringify(obj)});
