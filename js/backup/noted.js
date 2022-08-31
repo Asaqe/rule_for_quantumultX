@@ -1,5 +1,9 @@
-#^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/noted.js
-#hostname= subscription-api.notedapp.io
+/*
+[rewrite_local]
+^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/noted.js
+[mitm]
+hostname= subscription-api.notedapp.io
+*/
 var obj = {
   "environment": "Production",
   "receipt": {
