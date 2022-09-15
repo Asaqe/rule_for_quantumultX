@@ -2,10 +2,7 @@
 翻译
 [rewrite_local]
 https://(ssl|p.*)-(api|buy).(itranslateapp|itunes.apple).com/(accounts|WebObjects)/(v4|MZFinance.woa)/(subscriptions|wa)/(verify/ios|inAppRegrantPurchaseHistory) url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/itranslate.js
-[mitm]
-hostname=(ssl|p.*)-(api|buy).(itranslateapp|itunes.apple).com/(accounts|WebObjects)/(v4|MZFinance.woa)/(subscriptions|wa)/(verify/ios|inAppRegrantPurchaseHistory)
 */
-
 const path1 = "/WebObjects/MZFinance.woa/wa/inAppRegrantPurchaseHistory";
 const path2 = "/accounts/v4/subscriptions/verify/ios";
 
