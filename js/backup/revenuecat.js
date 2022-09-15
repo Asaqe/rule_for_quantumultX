@@ -1,15 +1,11 @@
 /*
 ^https:\/\/api.revenuecat.com\/v1\/subscribers\/ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/revenuecat.js
 */
-let obj=JSON.parse($response.body);
-let url=$request.url;
+ar head = $request.headers;
+var ua = head['User-Agent'];
 
-if(url.endsWith("offerings")||url.endsWith("products")) {
-	$done({});
-} else {
-	// Noto笔记Lifetime
-	if (url.indexOf("8DA3F946-C754-411E-8928-C9D1DAEC1CD1")!=-1) {
-		obj = {"request_date": "2020-06-05T11:54:41Z",
+if (ua.indexOf('noto') != -1) {
+    Body = {"request_date": "2020-06-05T11:54:41Z",
   "request_date_ms": 1591358081473,
   "subscriber": {
     "entitlements": {
@@ -38,71 +34,40 @@ if(url.endsWith("offerings")||url.endsWith("products")) {
         "store": "app_store",
         "unsubscribe_detected_at": null
       }
-    }
+    };
   }
 	}
 	// Airmail Premium
-	if (url.indexOf("5647911E-B243-48C9-A25C-29116412A20D")!=-1) {
-		obj["subscriber"]["entitlements"]={
-			"Airmail Premium": {
-				"expires_date": "2099-12-01T00:00:00Z",
-				"product_identifier": "Airmail_iOS_Yearly",
-				"purchase_date": "2019-12-01T00:00:00Z"
-			}
-		};
-		obj["subscriber"]["subscriptions"]={
-			"Airmail_iOS_Yearly": {
-				"is_sandbox": false,
-				"period_type": "active",
-				"billing_issues_detected_at": null,
-				"unsubscribe_detected_at": null,
-				"expires_date": "2099-12-01T00:00:00Z",
-				"original_purchase_date": "2019-10-31T00:00:00Z",
-				"purchase_date": "2019-10-31T00:00:00Z",
-				"store": "app_store"
-			}
-		};
-	}
-	if ((url.indexOf("2A78EEE3-6327-4377-9A58-DE429D7492B0")!=-1)||(url.indexOf("3DB84DEF-05B6-4B5D-9300-B5C18639CF9B")!=-1)||(url.indexOf("E5D5EAD3-417A-4672-9023-1FBBDD5D47E8")!=-1)){obj ={
-  "request_date_ms" : 1644807425219,
-  "request_date" : "2022-02-14T02:57:05Z",
-  "subscriber" : {
-    "non_subscriptions" : {
-      "filebox_pro" : [
-        {
-          "id" : "35cd5ede42",
-          "is_sandbox" : false,
-          "purchase_date" : "2022-02-13T10:28:11Z",
-          "original_purchase_date" : "2022-02-13T10:28:11Z",
-          "store" : "app_store"
-        }
-      ]
-    },
-    "first_seen" : "2022-02-13T10:30:14Z",
-    "original_application_version" : "100",
-    "other_purchases" : {
-      "filebox_pro" : {
-        "purchase_date" : "2022-02-13T10:28:11Z"
-      }
-    },
-    "management_url" : null,
-    "subscriptions" : {
 
-    },
-    "entitlements" : {
-      "filebox_pro" : {
-        "grace_period_expires_date" : null,
-        "purchase_date" : "2022-02-13T10:28:11Z",
-        "product_identifier" : "filebox_pro",
-        "expires_date" : null
-      }
-    },
-    "original_purchase_date" : "2022-02-02T22:54:45Z",
-    "original_app_user_id" : "$RCAnonymousID:0ab3738daba94750bcd43d1c99adcf39",
-    "last_seen" : "2022-02-13T10:30:14Z"
-   }
- };
-	    }
+
+
+if (ua.indexOf('Fileball') != -1) {
+    Body = {"request_date":"1983-03-15T00:00:00Z","request_date_ms":416505600000,"subscriber":{"entitlements":{"filebox_pro":{"expires_date":null,"grace_period_expires_date":null,"product_identifier":"filebox_pro","purchase_date":"1983-03-15T00:00:00Z"}},"first_seen":"1983-03-15T00:00:00Z","last_seen":"1983-03-15T00:00:00Z","management_url":null,"non_subscriptions":{"filebox_pro":[{"id":"yingzi","is_sandbox":false,"original_purchase_date":"1983-03-15T00:00:00Z","purchase_date":"1983-03-15T00:00:00Z","store":"app_store"}]},"original_app_user_id":"$RCAnonymousID%3A8e5a11e56b4246f2ab2b17058c01db1e","original_application_version":"170","original_purchase_date":"1983-03-15T00:00:00Z","other_purchases":{"filebox_pro":{"purchase_date":"1983-03-15T00:00:00Z"}},"subscriptions":{}}};
 }
 
-$done({body:JSON.stringify(obj)});
+if (ua.indexOf('Taio') != -1) {
+    Body = {"request_date_ms":1660324774251,"request_date":"2022-08-12T17:19:34Z","subscriber":{"non_subscriptions":{},"first_seen":"2022-08-12T16:17:04Z","original_application_version":"1052","other_purchases":{},"management_url":"https:\/\/apps.apple.com\/account\/subscriptions","subscriptions":{"taio_1499_1y_2w0_std_v2":{"is_sandbox":false,"ownership_type":"PURCHASED","billing_issues_detected_at":null,"period_type":"trial","expires_date":"2029-08-26T16:28:27Z","grace_period_expires_date":null,"unsubscribe_detected_at":null,"original_purchase_date":"2022-08-12T16:28:27Z","purchase_date":"2022-08-12T16:28:27Z","store":"app_store"}},"entitlements":{"full-version":{"grace_period_expires_date":null,"purchase_date":"2022-08-12T16:28:27Z","product_identifier":"taio_1499_1y_2w0_std_v2","expires_date":"2029-08-26T16:28:27Z"}},"original_purchase_date":"2022-08-12T16:16:50Z","original_app_user_id":"$RCAnonymousID:3eb1216e78ca4771948cfd0a8569858","last_seen":"2022-08-12T16:17:04Z"}};
+}
+
+if (ua.indexOf('Photo') != -1) {
+    Body = {"request_date_ms":"1581750589992","request_date":"2020-02-15T07:09:49Z","subscriber":{"non_subscriptions":{},"first_seen":"2020-02-14T20:28:01Z","original_application_version":"216","other_purchases":{},"subscriptions":{"com.neybox.pillow.premium.year":{"is_sandbox":false,"period_type":"trial","billing_issues_detected_at":null,"unsubscribe_detected_at":null,"expires_date":"2099-03-15T00:00:00Z","original_purchase_date":"2020-02-15T07:07:58Z","purchase_date":"2020-02-15T07:07:58Z","store":"app_store"}},"entitlements":{"premium":{"expires_date":"2099-03-15T00:00:00Z","product_identifier":"com.neybox.pillow.premium.year","purchase_date":"2020-02-15T07:07:58Z"}},"original_purchase_date":"2020-02-14T20:26:59Z","original_app_user_id":"D1D6D98B-EF51-48AF-9876-7352ABCEFD60","last_seen":"2020-02-14T20:28:01Z"}};
+}
+
+if (ua.indexOf('Pillow') != -1) {
+    Body = {"request_date_ms":"1581750589992","request_date":"2020-02-15T07:09:49Z","subscriber":{"non_subscriptions":{},"first_seen":"2020-02-14T20:28:01Z","original_application_version":"216","other_purchases":{},"subscriptions":{"com.neybox.pillow.premium.year":{"is_sandbox":false,"period_type":"trial","billing_issues_detected_at":null,"unsubscribe_detected_at":null,"expires_date":"2099-03-15T00:00:00Z","original_purchase_date":"2020-02-15T07:07:58Z","purchase_date":"2020-02-15T07:07:58Z","store":"app_store"}},"entitlements":{"premium":{"expires_date":"2099-03-15T00:00:00Z","product_identifier":"com.neybox.pillow.premium.year","purchase_date":"2020-02-15T07:07:58Z"}},"original_purchase_date":"2020-02-14T20:26:59Z","original_app_user_id":"D1D6D98B-EF51-48AF-9876-7352ABCEFD60","last_seen":"2020-02-14T20:28:01Z"}};
+}
+
+if (ua.indexOf('VSCO') != -1) {
+    Body = {"request_date":"2022-08-22T15:45:13Z","request_date_ms":1661183113727,"subscriber":{"entitlements":{"membership":{"expires_date":"2099-03-15T00:00:00Z","grace_period_expires_date":null,"product_identifier":"vsco_global_2999_annual_7D_free","purchase_date":"2022-08-22T15:42:10Z"}},"first_seen":"2022-08-22T15:29:41Z","last_seen":"2022-08-22T15:30:16Z","management_url":"https://apps.apple.com/account/subscriptions","non_subscriptions":{},"original_app_user_id":"$RCAnonymousID:7bb196482332456a92f0883d972bc680","original_application_version":"4396","original_purchase_date":"2022-08-22T15:27:36Z","other_purchases":{},"subscriptions":{"vsco_global_2999_annual_7D_free":{"billing_issues_detected_at":null,"expires_date":"2099-03-15T00:00:00Z","grace_period_expires_date":null,"is_sandbox":false,"original_purchase_date":"2022-08-22T15:42:11Z","ownership_type":"PURCHASED","period_type":"trial","purchase_date":"2022-08-22T15:42:10Z","store":"app_store","unsubscribe_detected_at":null}}}};
+}
+
+Status = 'HTTP/1.1 200 OK';
+Headers = {"Content-Type": "application/json"};
+
+const Response = {
+    status: Status,
+    headers: Headers,
+    body: JSON.stringify(Body)
+};
+
+$done(Response);
