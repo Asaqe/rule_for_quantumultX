@@ -7,8 +7,12 @@ Day One 脚本由本脚本与 dayone-pre.js （以下称 pre 脚本）两部分�
 3. 禁用掉 pre 脚本，重启 Day One，确认高级版状况不变
 如果后续误操作导致 Day One 恢复为 Free/Plus 则重复上述操作。
 #QX(response.status)后➕Code
-^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/new/master/js/backup/dayone.js
-MitM = dayone.me
+
+[rewrite_local]
+^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/dayone.js
+[MitM ]
+
+hostname = dayone.me
 本脚本由 @ImSingee 与 @Mornwind 共同完成，请勿在公开群组、频道或是论坛、博客发布
 */
 
