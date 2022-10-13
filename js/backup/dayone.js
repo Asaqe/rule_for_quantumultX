@@ -10,6 +10,8 @@ Day One 脚本由本脚本与 dayone-pre.js （以下称 pre 脚本）两部分�
 
 [rewrite_local]
 ^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/dayone.js
+
+^https:\/\/dayone\.me\/api\/users$ url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/dayone-pre
 [MitM ]
 
 hostname = dayone.me
