@@ -1,6 +1,6 @@
 /*
 [rewrite_local]
-https://www.instapaper.com/api/subscription_status url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/instapaper.js
+https://www.instapaper.com/api/subscription_status url script-response-body https://raw.githubusercontent.com/Asaqe/rule_for_quantumultX/master/js/backup/instapaper.js
 [mimt]
 hostname=www.instapaper.com
 */
